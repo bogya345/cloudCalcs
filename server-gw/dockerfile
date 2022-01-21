@@ -1,0 +1,9 @@
+# FROM node:10.3.0-slim
+# RUN mkdir -p /app
+# COPY src/* /app/
+# CMD ["pm2-runtime", "start", "/app/ecosystem.config.js"]
+
+FROM python
+RUN mkdir -p /app
+COPY src/* /app/
+CMD ["pm2-runtime", "start", "/app/ecosystem.config.js"]
