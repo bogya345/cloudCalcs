@@ -1,0 +1,1 @@
+# docker run -d -h my-mongo -p 27017:27017 --name omongodb mongo
