@@ -7,6 +7,10 @@ class OwnClient:
         self.client = MongoClient(self.mongoUrl)
         pass
 
+    def knock(self):
+        print('knock-knock')
+        pass
+
     def addDataToCalculate(self, jsonData, userId=None):
         db = self.client['UserStorage']
         clt = db['Data']

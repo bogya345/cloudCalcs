@@ -1,0 +1,11 @@
+# platform
+FROM python
+
+# requirments
+ADD requirs.txt
+RUN python -m pip install requirs
+
+WORKDIR /app
+ADD . /app
+
+# CMD
