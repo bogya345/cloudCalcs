@@ -15,9 +15,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+# from django.views.generic.base import RedirectView
+from django.shortcuts import redirect
 
 urlpatterns = [
     path('auth/', include('auth.urls')),
     path('profile/', include('profilepage.urls')),
-    path('admin/', admin.site.urls)
+    path('admin/', admin.site.urls),
+    # path('^.*$', include('maintenance.urls'))
+    path('', redirect('auth/'))
 ]
